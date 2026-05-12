@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_medications"
+        android:scaleType="centerCrop"
+        android:contentDescription="@null" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Barra superior -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <Button
+                    android:id="@+id/btnBack"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Volver"
+                    android:layout_marginEnd="6dp"
+                    style="@style/AppButton" />
+
+                <Button
+                    android:id="@+id/btnDelete"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Borrar"
+                    android:layout_marginStart="6dp"
+                    style="@style/AppButton" />
+
+            </LinearLayout>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Nombre del medicamento:" style="@style/AppLabel" />
+            <EditText android:id="@+id/inputMedName" android:layout_width="match_parent"
+                android:layout_height="44dp" android:hint="Nombre del medicamento"
+                android:inputType="text" style="@style/AppInput" />
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Cantidad total de pastillas:" style="@style/AppLabel" />
+            <EditText android:id="@+id/inputQuantity" android:layout_width="match_parent"
+                android:layout_height="44dp" android:hint="Cantidad total"
+                android:inputType="number" style="@style/AppInput" />
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Intervalo entre dosis (horas):" style="@style/AppLabel" />
+            <EditText android:id="@+id/inputInterval" android:layout_width="match_parent"
+                android:layout_height="44dp" android:hint="Cada cuantas horas (Ej: 8)"
+                android:inputType="number" style="@style/AppInput" />
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Hora de la primera dosis:" style="@style/AppLabel" />
+            <EditText android:id="@+id/inputStartTime" android:layout_width="match_parent"
+                android:layout_height="44dp" android:hint="Hora inicial 24H (Ej: 14:30)"
+                android:inputType="time" style="@style/AppInput" />
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Dias de tratamiento:" style="@style/AppLabel" />
+            <EditText android:id="@+id/inputDays" android:layout_width="match_parent"
+                android:layout_height="44dp" android:hint="Dias"
+                android:inputType="number" style="@style/AppInput" />
+
+            <!-- Paciente cronico -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:layout_marginTop="8dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Paciente cronico (365 dias):"
+                    style="@style/AppLabel" />
+                <CheckBox android:id="@+id/checkboxChronic"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSet"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Establecer Recordatorio"
+                android:layout_marginTop="12dp"
+                style="@style/AppButton" />
+
+            <TextView
+                android:id="@+id/labelStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Esperando datos..."
+                android:textColor="@color/green_status"
+                android:layout_marginTop="8dp"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuFragment">
+
+    <fragment android:id="@+id/menuFragment"
+        android:name="org.mateoUR.apprecordatorios.MenuFragment"
+        android:label="Menu">
+        <action android:id="@+id/action_menu_to_medications"
+            app:destination="@id/medicationFragment" />
+        <action android:id="@+id/action_menu_to_appointments"
+            app:destination="@id/appointmentFragment" />
+        <action android:id="@+id/action_menu_to_help"
+            app:destination="@id/helpFragment" />
+    </fragment>
+
+    <fragment android:id="@+id/medicationFragment"
+        android:name="org.mateoUR.apprecordatorios.MedicationFragment"
+        android:label="Medicamentos">
+        <action android:id="@+id/action_medications_to_delete_medications"
+            app:destination="@id/deleteMedicationFragment" />
+    </fragment>
+
+    <fragment android:id="@+id/appointmentFragment"
+        android:name="org.mateoUR.apprecordatorios.AppointmentFragment"
+        android:label="Citas">
+        <action android:id="@+id/action_appointments_to_delete_appointments"
+            app:destination="@id/deleteAppointmentFragment" />
+    </fragment>
+
+    <fragment android:id="@+id/deleteMedicationFragment"
+        android:name="org.mateoUR.apprecordatorios.DeleteMedicationFragment"
+        android:label="Borrar Recordatorio" />
+
+    <fragment android:id="@+id/deleteAppointmentFragment"
+        android:name="org.mateoUR.apprecordatorios.DeleteAppointmentFragment"
+        android:label="Borrar Cita" />
+
+    <fragment android:id="@+id/helpFragment"
+        android:name="org.mateoUR.apprecordatorios.HelpFragment"
+        android:label="Ayuda" />
+
+</navigation>

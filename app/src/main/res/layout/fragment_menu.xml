@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Imagen de fondo -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_menu"
+        android:scaleType="centerCrop"
+        android:contentDescription="@null" />
+
+    <!-- Contenido centrado -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="32dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="App Recordatorios"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/blue_dark"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/btnMedications"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Recordatorios de Medicamentos"
+            android:layout_marginBottom="12dp"
+            style="@style/AppButton" />
+
+        <Button
+            android:id="@+id/btnAppointments"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Citas Medicas"
+            android:layout_marginBottom="12dp"
+            style="@style/AppButton" />
+
+        <Button
+            android:id="@+id/btnHelp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Ayuda"
+            style="@style/AppButton" />
+
+    </LinearLayout>
+
+</FrameLayout>
